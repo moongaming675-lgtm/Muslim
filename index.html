@@ -6,16 +6,18 @@
     <title>سياسة الخصوصية | Muslim Bot</title>
     <style>
         :root {
-            --gold: #D4AF37;
-            --dark-bg: #0a0a0a;
-            --card-bg: #151515;
-            --text-gray: #b0b0b0;
+            --gold-primary: #D4AF37; /* لون ذهبي نقي */
+            --gold-secondary: #AA8C2A; /* ذهبي أغمق قليلاً للظلال */
+            --dark-bg: #030303; /* خلفية سوداء عميقة جدًا */
+            --card-bg: #0a0a0a; /* خلفية البطاقة */
+            --text-gold: #E5C76F; /* نص ذهبي فاتح قابل للقراءة */
+            --text-white: #ffffff;
         }
 
         body {
             background-color: var(--dark-bg);
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-white);
+            font-family: 'Amiri', serif; /* خط عربي فخم */
             margin: 0;
             padding: 0;
             display: flex;
@@ -25,119 +27,127 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 750px;
             width: 90%;
             background: var(--card-bg);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            padding: 50px;
+            border-radius: 25px;
+            border: 2px solid var(--gold-primary);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(212, 175, 55, 0.1);
             position: relative;
             overflow: hidden;
+            text-align: center;
         }
 
-        /* تأثير زخرفي في الخلفية */
-        .container::before {
+        /* تأثير زخرفي ذهبي في الزوايا */
+        .container::before, .container::after {
             content: "";
             position: absolute;
-            top: -50px;
-            left: -50px;
-            width: 150px;
-            height: 150px;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .logo-area {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .logo-placeholder {
             width: 100px;
             height: 100px;
-            border: 2px solid var(--gold);
+            border: 1px solid var(--gold-secondary);
             border-radius: 50%;
+            opacity: 0.1;
+        }
+        .container::before { top: -40px; right: -40px; }
+        .container::after { bottom: -40px; left: -40px; }
+
+        .logo-area {
+            margin-bottom: 40px;
             display: inline-block;
-            line-height: 100px;
-            font-size: 40px;
-            color: var(--gold);
-            box-shadow: 0 0 15px var(--gold);
+            border: 3px solid var(--gold-primary);
+            border-radius: 50%;
+            padding: 10px;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .logo-area img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: block;
         }
 
         h1 {
-            color: var(--gold);
-            font-size: 28px;
-            margin-top: 15px;
-            letter-spacing: 1px;
+            color: var(--gold-primary);
+            font-size: 32px;
+            margin-top: 10px;
+            letter-spacing: 2px;
+            font-family: 'Marhey', sans-serif; /* خط عربي فخم آخر للعنوان */
         }
 
         .content-section {
-            margin-bottom: 25px;
-            border-right: 3px solid var(--gold);
-            padding-right: 15px;
+            margin-bottom: 30px;
+            text-align: right;
+            border-right: 4px solid var(--gold-primary);
+            padding-right: 20px;
+            background: rgba(212, 175, 55, 0.03);
+            border-radius: 10px;
+            padding: 15px 20px 15px 0;
         }
 
         h2 {
-            font-size: 20px;
-            color: var(--gold);
-            margin-bottom: 10px;
+            font-size: 22px;
+            color: var(--gold-primary);
+            margin-bottom: 12px;
+            margin-top: 0;
         }
 
         p {
-            color: var(--text-gray);
-            font-size: 16px;
+            color: var(--text-gold);
+            font-size: 18px;
             margin: 0;
+            line-height: 1.6;
         }
 
         .footer {
             text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
-            font-size: 14px;
-            color: var(--gold);
-            opacity: 0.8;
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 1px solid var(--gold-secondary);
+            font-size: 16px;
+            color: var(--gold-secondary);
+            opacity: 0.9;
+            font-family: 'Arial', sans-serif; /* خط بسيط للحقوق */
         }
 
-        code {
-            background: #222;
-            padding: 2px 6px;
-            border-radius: 4px;
-            color: #fff;
-        }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Marhey:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="container">
         <div class="logo-area">
-            <div class="logo-placeholder">M</div>
-            <h1>سياسة الخصوصية واستخدام البيانات</h1>
+            <img src="https://i.imgur.com/ضع_رابط_صورتك_هنا.png" alt="Muslim Bot Logo">
+        </div>
+        
+        <h1>سياسة الخصوصية واستخدام البيانات</h1>
+
+        <div class="content-section">
+            <h2>البيانات الضرورية للخدمة</h2>
+            <p>نقوم بجمع الحد الأدنى من المعلومات التقنية الضرورية مثل معرف السيرفر (Server ID) ومعرف القناة المفضلة، وذلك لضمان تفعيل ميزات الأذكار والخدمات التلقائية بالشكل الصحيح.</p>
         </div>
 
         <div class="content-section">
-            <h2>البيانات التي نجمعها</h2>
-            <p>نقوم بجمع الحد الأدنى من البيانات الضرورية لتشغيل البوت، مثل معرف السيرفر (Server ID) ومعرفات القنوات (Channel IDs) لتفعيل ميزات الأذكار التلقائية.</p>
+            <h2>الخصوصية التامة للمستخدم</h2>
+            <p>نحن نحترم خصوصيتك تماماً. لا نقوم بالوصول إلى رسائل السيرفر، أو بيانات الأعضاء الشخصية، أو قوائم الأصدقاء. كل المعلومات تبقى محصورة داخل إعدادات البوت لخدمتك فقط.</p>
         </div>
 
         <div class="content-section">
-            <h2>كيفية استخدام المعلومات</h2>
-            <p>تُستخدم البيانات فقط لحفظ إعداداتك الخاصة مثل البريفكس المخصص وروم الأذكار المفضل، ولا يتم استخدامها لأي أغراض دعائية أو تجارية.</p>
+            <h2>أمن المعلومات وتخزينها</h2>
+            <p>يتم تخزين جميع الإعدادات بشكل آمن ومشفر داخل البوت، ولا نقوم بمشاركة أي معلومات مع أطراف خارجية أو جهات دعائية، مهما كانت الظروف.</p>
         </div>
 
         <div class="content-section">
-            <h2>تخزين البيانات وحمايتها</h2>
-            <p>يتم تخزين جميع البيانات محلياً داخل ملفات البوت <code>configAzkar.json</code> بشكل آمن تماماً، ولا نملك أي وصول لرسائل السيرفر أو بيانات الأعضاء الشخصية.</p>
-        </div>
-
-        <div class="content-section">
-            <h2>حقوق المستخدم</h2>
-            <p>يمكن لمديري السيرفر حذف كافة البيانات المسجلة فوراً عبر طرد البوت أو استخدام أوامر الإيقاف المخصصة مثل <code>+stop-azkar</code>.</p>
+            <h2>تحكم المسؤولين</h2>
+            <p>يمتلك مديرو السيرفر تحكماً كاملاً في البيانات. يمكن حذف كافة الإعدادات والبيانات المسجلة فوراً عند طرد البوت أو استخدام أوامر الإيقاف المخصصة.</p>
         </div>
 
         <div class="footer">
-            تصميم وبرمجة Mohamed Ahmed - Moon Gaming RX1 &copy; 2026
+            جميع الحقوق محفوظة &copy; Moon Gaming RX1
         </div>
     </div>
 
