@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية | Muslim Bot</title>
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark-bg: #0a0a0a;
+            --card-bg: #151515;
+            --text-gray: #b0b0b0;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* تأثير زخرفي في الخلفية */
+        .container::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .logo-area {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-placeholder {
+            width: 100px;
+            height: 100px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: inline-block;
+            line-height: 100px;
+            font-size: 40px;
+            color: var(--gold);
+            box-shadow: 0 0 15px var(--gold);
+        }
+
+        h1 {
+            color: var(--gold);
+            font-size: 28px;
+            margin-top: 15px;
+            letter-spacing: 1px;
+        }
+
+        .content-section {
+            margin-bottom: 25px;
+            border-right: 3px solid var(--gold);
+            padding-right: 15px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: var(--text-gray);
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            font-size: 14px;
+            color: var(--gold);
+            opacity: 0.8;
+        }
+
+        code {
+            background: #222;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo-area">
+            <div class="logo-placeholder">M</div>
+            <h1>سياسة الخصوصية واستخدام البيانات</h1>
+        </div>
+
+        <div class="content-section">
+            <h2>البيانات التي نجمعها</h2>
+            <p>نقوم بجمع الحد الأدنى من البيانات الضرورية لتشغيل البوت، مثل معرف السيرفر (Server ID) ومعرفات القنوات (Channel IDs) لتفعيل ميزات الأذكار التلقائية.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>كيفية استخدام المعلومات</h2>
+            <p>تُستخدم البيانات فقط لحفظ إعداداتك الخاصة مثل البريفكس المخصص وروم الأذكار المفضل، ولا يتم استخدامها لأي أغراض دعائية أو تجارية.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>تخزين البيانات وحمايتها</h2>
+            <p>يتم تخزين جميع البيانات محلياً داخل ملفات البوت <code>configAzkar.json</code> بشكل آمن تماماً، ولا نملك أي وصول لرسائل السيرفر أو بيانات الأعضاء الشخصية.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>حقوق المستخدم</h2>
+            <p>يمكن لمديري السيرفر حذف كافة البيانات المسجلة فوراً عبر طرد البوت أو استخدام أوامر الإيقاف المخصصة مثل <code>+stop-azkar</code>.</p>
+        </div>
+
+        <div class="footer">
+            تصميم وبرمجة Mohamed Ahmed - Moon Gaming RX1 &copy; 2026
+        </div>
+    </div>
+
+</body>
+</html>
