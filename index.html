@@ -42,20 +42,22 @@
             margin-bottom: 50px;
         }
 
-        /* تنسيق الصورة الدائرية الملكية */
+        /* --- تنسيق الصورة الدائرية الملكية المطور --- */
         .logo-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%; /* تجعلها دائرية تماماً */
+            width: 160px;
+            height: 160px;
+            border-radius: 50%; /* دائرة كاملة */
             border: 3px solid var(--gold);
-            box-shadow: 0 0 35px rgba(212, 175, 55, 0.5);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.6); /* توهج ذهبي */
             margin-bottom: 25px;
-            transition: 0.4s ease;
-            object-fit: cover; /* لضمان عدم تمدد الصورة */
+            transition: 0.5s ease;
+            object-fit: cover;
+            background-color: var(--dark); /* لعلاج مربعات خلفية الـ PNG */
         }
 
         .logo-img:hover {
-            transform: scale(1.08) rotate(5deg);
+            transform: scale(1.1) rotate(360deg); /* دوران كامل عند الوقوف عليها */
+            box-shadow: 0 0 50px var(--gold);
         }
 
         h1 {
@@ -115,7 +117,6 @@
             font-weight: bold;
         }
 
-        /* تنسيق منطقة الأزرار الملكية */
         .action-area {
             display: flex;
             justify-content: center;
@@ -193,7 +194,8 @@
 
     <div class="main-container">
         <div class="header">
-<img src="logo.png" alt="Muslim Bot Logo" class="logo-img">            <h1>مركز خدمات Muslim Bot الملكي</h1>
+            <img src="logo.png" alt="Muslim Bot Logo" class="logo-img">
+            <h1>مركز خدمات Muslim Bot الملكي</h1>
         </div>
 
         <div class="grid-layout">
