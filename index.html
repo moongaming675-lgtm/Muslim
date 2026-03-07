@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مركز خدمات Muslim Bot</title>
+    <title>مركز خدمات Muslim Bot | Mohamed Ahmed</title>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Reem+Kufi:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --gold: #D4AF37;
+            --gold-dark: #AA8C2A;
             --dark: #050505;
-            --card-bg: rgba(20, 20, 20, 0.98);
+            --card-bg: rgba(10, 10, 10, 0.95);
         }
 
         body {
@@ -26,9 +27,9 @@
         }
 
         .main-container {
-            max-width: 1000px;
+            max-width: 950px;
             width: 95%;
-            animation: fadeIn 1s ease-in;
+            animation: fadeIn 1.2s ease-in;
         }
 
         @keyframes fadeIn {
@@ -38,101 +39,101 @@
 
         .header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
+        /* تنسيق الصورة الدائرية الملكية */
         .logo-img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* تجعلها دائرية تماماً */
             border: 3px solid var(--gold);
-            box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
-            margin-bottom: 20px;
-            transition: 0.5s;
+            box-shadow: 0 0 35px rgba(212, 175, 55, 0.5);
+            margin-bottom: 25px;
+            transition: 0.4s ease;
+            object-fit: cover; /* لضمان عدم تمدد الصورة */
         }
 
         .logo-img:hover {
-            transform: rotate(360deg) scale(1.1);
+            transform: scale(1.08) rotate(5deg);
         }
 
         h1 {
             font-family: 'Reem Kufi', sans-serif;
             color: var(--gold);
-            font-size: clamp(24px, 5vw, 40px);
+            font-size: clamp(26px, 5vw, 42px);
             margin: 10px 0;
-            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
         }
 
         .grid-layout {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
         }
 
         .card {
             background: var(--card-bg);
-            border: 1px solid rgba(212, 175, 55, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.2);
             border-radius: 25px;
-            padding: 30px;
-            transition: 0.3s;
+            padding: 35px;
+            transition: all 0.3s ease;
             position: relative;
         }
 
         .card:hover {
             border-color: var(--gold);
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.1);
-            transform: scale(1.02);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+            transform: translateY(-8px);
         }
 
         .card-title {
             color: var(--gold);
-            font-size: 24px;
+            font-size: 26px;
             font-family: 'Reem Kufi', sans-serif;
             margin-bottom: 20px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 10px;
-        }
-
-        .section-text ul {
-            padding: 0;
-            list-style: none;
+            gap: 12px;
         }
 
         .section-text li {
-            margin-bottom: 12px;
-            color: #d1d1d1;
-            font-size: 18px;
-            line-height: 1.6;
+            color: #e0e0e0;
+            font-size: 19px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            list-style: none;
         }
 
         .section-text li::before {
-            content: "•";
+            content: "✦";
             color: var(--gold);
             margin-left: 10px;
             font-weight: bold;
         }
 
-        /* تنسيق الأزرار */
+        /* تنسيق منطقة الأزرار الملكية */
         .action-area {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
             flex-wrap: wrap;
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         .btn {
-            padding: 15px 35px;
-            border-radius: 50px;
+            padding: 18px 40px;
+            border-radius: 60px;
             font-family: 'Reem Kufi', sans-serif;
-            font-size: 20px;
+            font-size: 22px;
             text-decoration: none;
-            transition: 0.4s;
+            transition: 0.4s ease;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             border: 2px solid var(--gold);
             cursor: pointer;
         }
@@ -146,7 +147,7 @@
         .btn-add:hover {
             background: transparent;
             color: var(--gold);
-            box-shadow: 0 0 20px var(--gold);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
         }
 
         .btn-support {
@@ -161,23 +162,30 @@
 
         .soon-badge {
             position: absolute;
-            top: -12px;
-            left: -10px;
+            top: -15px;
+            left: -15px;
             background: #ff4747;
             color: white;
-            font-size: 12px;
-            padding: 2px 10px;
-            border-radius: 10px;
+            font-size: 13px;
+            padding: 3px 12px;
+            border-radius: 12px;
             font-family: sans-serif;
-            box-shadow: 0 0 10px rgba(255, 71, 71, 0.5);
-            transform: rotate(-10deg);
+            box-shadow: 0 0 12px rgba(255, 71, 71, 0.5);
+            transform: rotate(-12deg);
+            z-index: 2;
         }
 
         .footer {
-            margin-top: 50px;
+            margin-top: 60px;
             text-align: center;
-            color: rgba(212, 175, 55, 0.6);
-            font-size: 16px;
+            color: rgba(212, 175, 55, 0.7);
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .logo-img { width: 120px; height: 120px; }
+            .card { padding: 25px; }
         }
     </style>
 </head>
@@ -185,8 +193,8 @@
 
     <div class="main-container">
         <div class="header">
-            <img src="https://i.imgur.com/ضع_رابط_صورتك_هنا.png" alt="Muslim Logo" class="logo-img">
-            <h1>مركز خدمات بوت Muslim الملكي</h1>
+            <img src="https://i.imgur.com/ضع_رابط_صورتك_هنا.png" alt="Muslim Bot Logo" class="logo-img">
+            <h1>مركز خدمات Muslim Bot الملكي</h1>
         </div>
 
         <div class="grid-layout">
@@ -194,10 +202,10 @@
                 <div class="card-title">🛡️ سياسة الخصوصية</div>
                 <div class="section-text">
                     <ul>
-                        <li>حفظ معرفات السيرفر والقنوات لتشغيل الأذكار فقط.</li>
-                        <li>لا يتم مراقبة أو تخزين أي رسائل شخصية للأعضاء.</li>
-                        <li>خصوصية تامة للبيانات وعدم مشاركتها مع أي طرف.</li>
-                        <li>مسح شامل للبيانات فور مغادرة البوت للسيرفر.</li>
+                        <li>حفظ معرفات السيرفر والقنوات لتشغيل الأذكار التلقائية.</li>
+                        <li>لا يتم تخزين أو مراقبة أي رسائل شخصية للأعضاء نهائياً.</li>
+                        <li>جميع البيانات تُخزن بشكل آمن ولا تُشارك مع أي طرف ثالث.</li>
+                        <li>يتم مسح كافة البيانات المرتبطة بالسيرفر فور طرد البوت.</li>
                     </ul>
                 </div>
             </div>
@@ -206,10 +214,10 @@
                 <div class="card-title">📜 شروط الخدمة</div>
                 <div class="section-text">
                     <ul>
-                        <li>الالتزام التام بشروط وقوانين منصة ديسكورد.</li>
-                        <li>يمنع استخدام خدماتنا في سيرفرات تخالف الشريعة.</li>
-                        <li>المطور غير مسؤول عن أي سوء إدارة من قبل المستخدم.</li>
-                        <li>يحق للإدارة إيقاف الخدمة عند مخالفة هذه الشروط.</li>
+                        <li>باستخدامك للبوت، فإنك توافق على الالتزام بشروط ديسكورد الرسمية.</li>
+                        <li>يُمنع استخدام البوت في أي سيرفرات تخالف الشريعة الإسلامية.</li>
+                        <li>نحن غير مسؤولين عن أي سوء استخدام لصلاحيات البوت من قبل الإدارة.</li>
+                        <li>يحق للإدارة إيقاف الخدمة عن أي سيرفر يسيء استخدام البوت.</li>
                     </ul>
                 </div>
             </div>
