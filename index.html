@@ -40,32 +40,16 @@
         .header {
             text-align: center;
             margin-bottom: 50px;
-        }
-
-        /* --- تنسيق الصورة الدائرية الملكية المطور --- */
-        .logo-img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%; /* دائرة كاملة */
-            border: 3px solid var(--gold);
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.6); /* توهج ذهبي */
-            margin-bottom: 25px;
-            transition: 0.5s ease;
-            object-fit: cover;
-            background-color: var(--dark); /* لعلاج مربعات خلفية الـ PNG */
-        }
-
-        .logo-img:hover {
-            transform: scale(1.1) rotate(360deg); /* دوران كامل عند الوقوف عليها */
-            box-shadow: 0 0 50px var(--gold);
+            margin-top: 20px;
         }
 
         h1 {
             font-family: 'Reem Kufi', sans-serif;
             color: var(--gold);
-            font-size: clamp(26px, 5vw, 42px);
+            font-size: clamp(32px, 6vw, 52px); /* كبّرت الخط قليلاً لتعويض غياب الصورة */
             margin: 10px 0;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            text-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            letter-spacing: 1px;
         }
 
         .grid-layout {
@@ -113,6 +97,7 @@
         .section-text li::before {
             content: "✦";
             color: var(--gold);
+            margin-right: 0;
             margin-left: 10px;
             font-weight: bold;
         }
@@ -185,8 +170,8 @@
         }
 
         @media (max-width: 768px) {
-            .logo-img { width: 120px; height: 120px; }
             .card { padding: 25px; }
+            h1 { font-size: 28px; }
         }
     </style>
 </head>
@@ -194,7 +179,6 @@
 
     <div class="main-container">
         <div class="header">
-            <img src="logo.png" alt="Muslim Bot Logo" class="logo-img">
             <h1>مركز خدمات Muslim Bot الملكي</h1>
         </div>
 
@@ -238,7 +222,7 @@
         </div>
 
         <div class="footer">
-            تصميم وتطوير Mohamed Ahmed • mqu3 © 2026
+            تصميم وتطوير Mohamed Ahmed • Moon Gaming RX1 © 2026
         </div>
     </div>
 
